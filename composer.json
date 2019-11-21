@@ -1,5 +1,5 @@
 {
-    "name": "idesigning/laravel-mariadb",
+    "name": "ybr-nx/laravel-mariadb",
     "description": "Add MariaDB JSON select support to Laravel",
     "keywords": ["database", "laravel", "mariadb", "json"],
     "license": "EUPL-1.2",
