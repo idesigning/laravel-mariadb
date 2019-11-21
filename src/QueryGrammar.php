@@ -12,7 +12,7 @@ class QueryGrammar extends MySqlGrammar
     {
         if (Str::contains($value, '->>')) {
             $delimiter = '->>';
-            $format = 'JSON_UNQUOTE(JSON_EXTRACT(%s, \'$.%s\'))';
+            $format = 'JSON_UNQUOTE(JSON_EXTRACT(%s, \'$.%s\')) COLLATE utf8_general_ci';
         } else {
             $delimiter = '->';
             $format = 'JSON_EXTRACT(%s, \'$.%s\')';
@@ -38,7 +38,7 @@ class QueryGrammar extends MySqlGrammar
 
             if (Str::contains($value, '->>')) {
                 $delimiter = '->>';
-                $format = 'JSON_UNQUOTE(JSON_EXTRACT(%s, \'$.%s\'))';
+                $format = 'JSON_UNQUOTE(JSON_EXTRACT(%s, \'$.%s\')) COLLATE utf8_general_ci';
             } else {
                 $delimiter = '->';
                 $format = 'JSON_EXTRACT(%s, \'$.%s\')';
